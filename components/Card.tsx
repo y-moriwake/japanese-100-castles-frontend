@@ -5,12 +5,12 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import { CastleInfo } from '../interfaces/CastleInfo'
 
 const useStyles = makeStyles({
   root: {
-    minWidth: 50,
-    maxWidth: 300,
-    backgroundColor: "#4169e1",
+    margin:10,
+    backgroundColor: "#89c3eb",
   },
   title: {
     fontSize: 15,
@@ -20,25 +20,24 @@ const useStyles = makeStyles({
   },
 });
 
-const SimpleCard = () => {
-  const classes = useStyles();
+function SimpleCard({ regionalName, castlesName, id}: CastleInfo) {
+    const classes = useStyles();
 
-  return (
-    <Card className={classes.root}>
-      <CardContent>
-        <Typography variant="h2" component="h2">
-          岡山城
-        </Typography>
-        <Typography variant="body2" component="p">
-          岡山県
-          <br />
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
-  );
+    return (
+        <Card className={classes.root} key={id}>
+            <CardContent>
+                <Typography variant="h4" component="h2">
+                    {regionalName}
+                </Typography>
+                <Typography variant="body2" component="p">
+                    {castlesName}
+                </Typography>
+            </CardContent>
+            <CardActions>
+                <Button size="small">Learn More</Button>
+            </CardActions>  
+        </Card>
+    );
 }
 
 export default SimpleCard;
