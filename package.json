@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.11.2",
+    "autoprefixer": "^10.2.1",
     "next": "latest",
+    "postcss-cli": "^8.3.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
@@ -17,6 +19,8 @@
     "@types/node": "^12.12.21",
     "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "^2.0.2",
     "typescript": "4.0"
   },
   "license": "MIT"
