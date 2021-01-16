@@ -9,26 +9,26 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles({
     root: {
       margin:10,
-      backgroundColor: "#89c3eb",
+      backgroundColor: "#dddcd6",
     },
   });
 
 type Props = {
-    regionalName: string,
-    castlesName: string
+    castlesName: string 
+    prefectures: string
 }
 
-function SimpleCard({ regionalName, castlesName }: Props) {
+function SimpleCard({ castlesName, prefectures }: Props) {
     const classes = useStyles();
 
     return (
-            <Card className={classes.root} >
+            <Card className={classes.root}>
                 <CardContent>
-                    <Typography variant="h4" component="h2">
-                        {regionalName}
+                    <Typography variant="h5" component="h2">
+                        {castlesName}
                     </Typography>
                     <Typography variant="body2" component="p">
-                        {castlesName}
+                        {prefectures}
                     </Typography>
                 </CardContent>
                 <CardActions>
