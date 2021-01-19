@@ -8,33 +8,33 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
     root: {
-      margin:10,
-      backgroundColor: "#dddcd6",
+        margin: 10,
+        backgroundColor: "#dddcd6",
     },
-  });
+});
 
 type Props = {
-    castlesName: string 
+    castlesName: string
     prefectures: string
 }
 
-function SimpleCard({ castlesName, prefectures }: Props) {
+const SimpleCard = ({ castlesName, prefectures }: Props) => {
     const classes = useStyles();
 
     return (
-            <Card className={classes.root}>
-                <CardContent>
-                    <Typography variant="h5" component="h2">
-                        {castlesName}
-                    </Typography>
-                    <Typography variant="body2" component="p">
-                        {prefectures}
-                    </Typography>
-                </CardContent>
-                <CardActions>
-                    <Button size="small">Learn More</Button>
-                </CardActions>
-            </Card>
+        <Card className={classes.root}>
+            <CardContent>
+                <Typography variant="h5" component="h2">
+                    {castlesName}
+                </Typography>
+                <Typography variant="body2" component="p">
+                    {prefectures}
+                </Typography>
+            </CardContent>
+            <CardActions>
+                <Button size="small">Learn More</Button>
+            </CardActions>
+        </Card>
     );
 }
 
