@@ -5,34 +5,51 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardMedia from '@material-ui/core/CardMedia';
 
 const useStyles = makeStyles({
     root: {
-        margin: 10,
-        backgroundColor: "#dddcd6",
+        maxWidth: 385,
+        backgroundColor: "#dddcd6"
+    },
+    media: {
+        height: 150,
     },
 });
 
 type Props = {
     castlesName: string
-    prefectures: string
+    dicsription: string
 }
 
-const SimpleCard = ({ castlesName, prefectures }: Props) => {
+const SimpleCard = ({ castlesName, dicsription }: Props) => {
     const classes = useStyles();
 
     return (
         <Card className={classes.root}>
-            <CardContent>
-                <Typography variant="h5" component="h2">
-                    {castlesName}
-                </Typography>
-                <Typography variant="body2" component="p">
-                    {prefectures}
-                </Typography>
-            </CardContent>
+            <CardActionArea>
+                <CardMedia
+                    className={classes.media}
+                    image="/images/himeji.jpg"
+                    title="himeji castle"
+                />
+                <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                        {castlesName}
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                        {dicsription}
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
             <CardActions>
-                <Button size="small">Learn More</Button>
+                <Button size="small" color="primary">
+                    Share
+          </Button>
+                <Button size="small" color="primary">
+                    Learn More
+          </Button>
             </CardActions>
         </Card>
     );
