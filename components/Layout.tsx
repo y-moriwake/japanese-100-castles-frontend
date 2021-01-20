@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
-import Link from 'next/link'
 import Head from 'next/head'
+import CenteredTabs from './Tab';
 
 type Props = {
   children?: ReactNode
@@ -15,27 +15,16 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <header>
-      <nav>
-        <Link href="/">
-          <a>Home</a>
-        </Link>{' '}
-        |{' '}
-        <Link href="/about">
-          <a>About</a>
-        </Link>{' '}
-        |{' '}
-        <Link href="/users">
-          <a>Users List</a>
-        </Link>{' '}
-        | <a href="/api/users">Users API</a>
+      <nav className="mt-2">
+        <CenteredTabs />
       </nav>
     </header>
-    {children}
-    <footer>
+    { children}
+    <footer className="text-right">
       <hr />
       <span>© 2021 y-moriwake</span>
     </footer>
-  </div>
+  </div >
 )
 
 export default Layout
