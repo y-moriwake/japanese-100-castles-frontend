@@ -19,6 +19,7 @@ const CenteredTabs = () => {
         setValue(newValue);
         // 押されたタブのindex
         console.log(`${value}`);
+        console.log(event);
     };
 
     return (
