@@ -20,7 +20,7 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
       </nav>
     </header>
     { children}
-    <footer className="text-right">
+    <footer className="text-right mt-5">
       <hr />
       <span>© 2021 y-moriwake</span>
     </footer>

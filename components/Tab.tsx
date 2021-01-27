@@ -6,14 +6,14 @@ import Tab from '@material-ui/core/Tab';
 
 const useStyles = makeStyles({
     root: {
-        flexGrow: 1,
+        flexGrow: 0,
         backgroundColor: "#dddcd6"
     },
 });
 
 const CenteredTabs = () => {
     const classes = useStyles();
-    const [value, setValue] = React.useState(1);
+    const [value, setValue] = React.useState(0);
 
     const handleChange = (event: React.ChangeEvent<{}>, newValue: number) => {
         setValue(newValue);
