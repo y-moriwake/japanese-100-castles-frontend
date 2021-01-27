@@ -14,16 +14,17 @@ const useStyles = makeStyles({
         backgroundColor: "#dddcd6"
     },
     media: {
-        height: 150,
+        height: 180,
     },
 });
 
 type Props = {
     castlesName: string
+    prefecturesName: string
     dicsription: string
 }
 
-const SimpleCard = ({ castlesName, dicsription }: Props) => {
+const CastleCard = ({ castlesName, prefecturesName, dicsription }: Props) => {
     const classes = useStyles();
 
     return (
@@ -37,6 +38,9 @@ const SimpleCard = ({ castlesName, dicsription }: Props) => {
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
                         {castlesName}
+                    </Typography>
+                    <Typography gutterBottom variant="h6" component="h3">
+                        {prefecturesName}
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
                         {dicsription}
@@ -55,4 +59,4 @@ const SimpleCard = ({ castlesName, dicsription }: Props) => {
     );
 }
 
-export default SimpleCard;
+export default CastleCard;
