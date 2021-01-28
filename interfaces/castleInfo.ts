@@ -2,6 +2,6 @@
 export type CastleInfo = {
     id: number
     castlesName: string
-    prefecturesName: string
+    prefectureName: string
     description: string
 }

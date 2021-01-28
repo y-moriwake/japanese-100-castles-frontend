@@ -49,11 +49,8 @@ const CastleCard = ({ castlesName, prefecturesName, dicsription }: Props) => {
             </CardActionArea>
             <CardActions>
                 <Button size="small" color="primary">
-                    Share
-          </Button>
-                <Button size="small" color="primary">
                     Learn More
-          </Button>
+                </Button>
             </CardActions>
         </Card>
     );
