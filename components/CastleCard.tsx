@@ -7,6 +7,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardMedia from '@material-ui/core/CardMedia';
+import { CastleInfo } from '../interfaces/CastleInfo';
 
 const useStyles = makeStyles({
     root: {
@@ -19,12 +20,10 @@ const useStyles = makeStyles({
 });
 
 type Props = {
-    castlesName: string
-    prefecturesName: string
-    dicsription: string
+    castleInfo: CastleInfo
 }
 
-const CastleCard = ({ castlesName, prefecturesName, dicsription }: Props) => {
+const CastleCard = ({ castleInfo }: Props) => {
     const classes = useStyles();
 
     return (
@@ -37,19 +36,19 @@ const CastleCard = ({ castlesName, prefecturesName, dicsription }: Props) => {
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                        {castlesName}
+                        {castleInfo.name}
                     </Typography>
-                    <Typography gutterBottom variant="h6" component="h3">
-                        {prefecturesName}
+                    <Typography gutterBottom variant="subtitle1" component="h3">
+                        {castleInfo.address}
                     </Typography>
                     <Typography variant="body2" color="textSecondary" component="p">
-                        {dicsription}
+                        {castleInfo.description}
                     </Typography>
                 </CardContent>
             </CardActionArea>
             <CardActions>
                 <Button size="small" color="primary">
-                    Learn More
+                    詳細
                 </Button>
             </CardActions>
         </Card>
