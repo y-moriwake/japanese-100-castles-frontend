@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '../components/Layout'
 import CastleGrid from '../components/CastleGrid'
-import { CastleInfos } from '../utils/castle-100-data'
 
 const IndexPage = () => {
 
@@ -21,7 +20,7 @@ const IndexPage = () => {
           <li className="mt-1 ml-4">各都道府県から1城以上5城以内</li>
         </h3>
         <h1 className="text-blue-700 text-5xl mt-5 text-center"></h1>
-        <CastleGrid CastleInfos={CastleInfos} />
+        <CastleGrid />
       </Layout>
     </div >
   )
