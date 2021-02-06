@@ -15,8 +15,11 @@ const useStyles = makeStyles({
         backgroundColor: "#dddcd6"
     },
     media: {
-        height: 180,
+        height: 250,
     },
+    description: {
+        height: 100,
+    }
 });
 
 type Props = {
@@ -41,7 +44,7 @@ const CastleCard = ({ castleInfo }: Props) => {
                     <Typography gutterBottom variant="subtitle1" component="h3">
                         {castleInfo.address}
                     </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
+                    <Typography className={classes.description} variant="body2" color="textSecondary" component="p">
                         {castleInfo.description}
                     </Typography>
                 </CardContent>
